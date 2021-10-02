@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { SMALL_SCREEN } from "../../utils/constants/sizes";
+import { SMALL_SCREEN } from "../../utils/constants/variables";
 import { useMediaQuery } from "../../utils/hooks/useMediaQuery";
 
 const Technologies = () => {

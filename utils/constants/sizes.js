@@ -1,7 +1,0 @@
-let MOBILE = "480px";
-let SMALL_SCREEN = "600px";
-let TABLET = "768px";
-let DESKTOP = "992px";
-let EXTRA_LARGE_SCREEN = "1200px";
-
-export { MOBILE, TABLET, SMALL_SCREEN, DESKTOP, EXTRA_LARGE_SCREEN };

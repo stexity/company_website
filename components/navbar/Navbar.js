@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useMediaQuery } from "../../utils/hooks/useMediaQuery";
-import { MOBILE, SMALL_SCREEN } from "../../utils/constants/sizes";
+import { MOBILE, SMALL_SCREEN } from "../../utils/constants/variables";
 export default function Navbar() {
   const isMobile = useMediaQuery(`(max-width: ${SMALL_SCREEN})`);
 
