@@ -1,0 +1,75 @@
+Interfaces
+----------------
+
+Input:
+
+interface DbLoad {
+	roots: BranchNode[],
+}
+
+Interface BranchNode {
+    name: string,
+    children: (BranchNode | LeafNode)[],
+}
+
+interface LeafNode {
+    name: string,
+    group: string,
+}
+
+Output:
+
+interface DbSave {
+    rootName: string,
+    leafName: string,
+    group: string,
+}
+
+Interfaces
+----------------
+
+Input: 
+
+DbLoad: 
+
+{
+    roots: [
+        {
+            name: "A",
+            children: [
+                {
+                    name: "B",
+                    children: [
+                        {
+                            name: "C",
+                            group: "1",
+                        },
+                    ],
+                },
+                {
+                    name: "D",
+                    group: "2",
+                },
+            ],
+        },
+        {
+            name: "E",
+            children: [
+                {
+                    name: "F",
+                    group: "3",
+                },
+            ],
+        },
+    ],
+}
+
+Output:
+
+DbSave (changing C to group 4):
+
+{
+    rootName: "A",
+    leafName: "C",
+    group: "4",
+}

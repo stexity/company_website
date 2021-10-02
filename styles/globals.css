@@ -1,9 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+
+:root {
+  --primary: #0d0d0f;
+  --primary-light: #fffafa;
+  --primary-blue-dark: #1a283f;
+  --primary-blue-light: #2da2d5;
+  --font-size-small: 14px;
+  --font-size-normal: 16px;
+  --font-size-large: 18px;
+  --font-size-subheader: 20px;
+  --font-size-header: 25px;
+  --font-weight-header: 700;
+  --border-radius-primary: 16px;
+  --size-mobile: 480px;
+  --size-small: 600px;
+  --size-tablet: 768px;
+  --size-desktop: 992px;
+  --size-extra-large: 1200px;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  background-color: var(--primary);
+  color: var(--primary-light);
+  position: relative;
+  font-size: var(--font-size-normal);
 }
 
 a {
@@ -13,4 +38,162 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* CLASS STYLES */
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 100px);
+}
+.banner-title {
+  font-size: 60px;
+  font-weight: var(--font-weight-header);
+}
+.banner-tagline {
+  font-size: 25px;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.dot-container {
+  padding-bottom: 70px;
+}
+
+.custom-dot-list {
+  margin-bottom: 0px !important;
+}
+
+.navbar {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background-color: var(--primary);
+  z-index: 9999;
+  box-shadow: -20px 10px 5px var(--primary);
+}
+.nav-logo {
+  flex: 3;
+}
+.nav-menu {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio-card {
+  border-radius: 15px;
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.project-image-container {
+  position: relative;
+}
+.portfolio-projects {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 30px;
+}
+
+.project-image-container:hover .portfolio-card {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.project-image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+}
+
+.service-card {
+  padding: 12px;
+  margin: 16px;
+  /*Using a small margin here since otherwise the left broder of the next card was visible */
+  /* margin-left: 1px;  */
+  flex-wrap: wrap;
+  font-size: var(--font-size-small);
+  text-align: center;
+  border: 1px solid var(--primary-light);
+  border-radius: var(--border-radius-primary);
+}
+.service-card-para {
+  font-size: var(--font-size-small);
+  line-height: 2.5;
+}
+.service-card-title {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-subheader);
+}
+
+.technologies-section,
+.services-section,
+.portfolio-section {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 100px);
+  padding-top: 1.5rem;
+}
+
+.section-header {
+  font-size: var(--font-size-header);
+  font-weight: var(--font-weight-header);
+}
+.service-list {
+  margin-top: 48px;
+}
+
+.technolgies-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media (max-width: 480px) {
+  .container {
+    width: 88%;
+    margin: 24px;
+  }
+  .technolgies-list {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: -45px;
+  }
+
+  .portfolio-projects {
+    grid-template-columns: 1fr;
+  }
+
+  .services-section {
+    margin-bottom: 90px;
+  }
 }
