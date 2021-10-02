@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
 
 :root {
-  --primary: #0d0d0f;
-  --primary-light: #fffafa;
-  --primary-blue-dark: #1a283f;
-  --primary-blue-light: #2da2d5;
+  --primary: #3F72AF;
+  --primary-light: #F9F7F7;
+  --primary-blue-dark: #112D4E;
+  --primary-blue-light: #DBE2EF;
   --font-size-small: 14px;
   --font-size-normal: 16px;
   --font-size-large: 18px;
@@ -69,6 +69,7 @@ a {
 }
 
 .navbar {
+  padding-left: 30px;
   display: flex;
   height: 100px;
   justify-content: space-between;
@@ -76,17 +77,17 @@ a {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  background-color: var(--primary);
+  background-color: var(--primary-blue-light);
   z-index: 9999;
-  box-shadow: -20px 10px 5px var(--primary);
+  box-shadow: -1px 1px 1px 1px var(--primary-blue-dark);
 }
 .nav-logo {
   flex: 3;
 }
 .nav-menu {
-  flex: 2;
+  flex: 1;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .portfolio-card {

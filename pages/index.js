@@ -19,8 +19,8 @@ export default function Home() {
         ></link>
       </Head>
 
-      <main className="container">
         <Navbar />
+      <main className="container">
 
         <Banner />
         <Services />
