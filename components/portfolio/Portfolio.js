@@ -2,6 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Modal from "../modal/Modal";
 
+
 const Portfolio = () => {
   const responsive = {
     superLargeDesktop: {
@@ -70,15 +71,7 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio-section">
-      <button
-        onClick={() => {
-          setShowModal(true);
-          // document.querySelector("body").style.overflow = "hidden";
-        }}
-      >
-        Open Modal
-      </button>
-      <div className="section-header">Portfolio:</div>
+      <div className="section-header">Portfolio</div>
       <div className="portfolio-projects">
         {projectsList.map((project) => {
           return (
@@ -86,17 +79,14 @@ const Portfolio = () => {
               <Image
                 src={project.image}
                 alt={project.alt}
-                width={400}
-                height={300}
+                width={600}
+                height={500}
                 className="portfolio-card"
               />
             </div>
           );
         })}
       </div>
-      <Modal onClose={() => setShowModal(false)} show={showModal}>
-        <div style={{ color: "red" }}>Hello from the modal!</div>
-      </Modal>
     </div>
   );
 };

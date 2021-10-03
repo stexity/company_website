@@ -177,7 +177,7 @@ const Technologies = () => {
 
   return (
     <div className="technologies-section">
-      <div className="section-header">Technolgies:</div>
+      <div className="section-header">Technolgies</div>
       <div className="technolgies-list">
         <canvas id="canvas" ref={canvasRef}></canvas>
       </div>

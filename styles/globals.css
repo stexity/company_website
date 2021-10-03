@@ -106,11 +106,12 @@ a {
   position: relative;
 }
 .portfolio-projects {
-  margin-top: 48px;
+  margin-top: 55px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 20px;
-  row-gap: 30px;
+  align-self: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 150px;
+  row-gap: 50px;
 }
 
 .project-image-container:hover .portfolio-card {
@@ -134,29 +135,6 @@ a {
   display: flex;
   justify-content: space-around;
   width: 60%;
-}
-
-.service-card {
-  padding: 12px;
-  margin: 16px;
-  /*Using a small margin here since otherwise the left broder of the next card was visible */
-  /* margin-left: 1px;  */
-  flex-wrap: wrap;
-  font-size: var(--font-size-small);
-  text-align: center;
-  border: 1px solid var(--primary-light);
-  border-radius: var(--border-radius-primary);
-}
-.service-card-para {
-  font-size: var(--font-size-small);
-  line-height: 2.5;
-}
-.service-card-title {
-  min-height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--font-size-subheader);
 }
 
 .technologies-section,
