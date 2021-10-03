@@ -25,7 +25,7 @@ const Services = () => {
 
   return (
     <div className="services-section">
-      <div className="section-header">Services we offer: </div>
+      <div className="section-header">Services we offer </div>
       <div className="service-list">
         <Carousel
           responsive={responsive}

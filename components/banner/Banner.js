@@ -7,7 +7,7 @@ const Banner = () => {
   return (
     <div className="banner">
       <div className="banner-title">Stexity</div>
-      <div className="banner-tagline">Innovation Meets Efficiancy</div>
+      <div className="banner-tagline">Innovation Meets Efficiency</div>
       <div className="banner-image">
       <Image  alt="Wave"
         layout="responsive"
