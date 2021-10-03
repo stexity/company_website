@@ -1,23 +1,59 @@
-import { useEffect } from "react";
-import { useMediaQuery } from "../../utils/hooks/useMediaQuery";
-import { MOBILE, SMALL_SCREEN } from "../../utils/constants/variables";
-import Image from 'next/image'
-import logo from '../../public/assets/images/1.png'
-export default function Navbar() {
-  const isMobile = useMediaQuery(`(max-width: ${SMALL_SCREEN})`);
+import React from "react";
+import {
+	AppBar,
+	Toolbar,
+	CssBaseline,
+	Typography,
+	makeStyles,
+} from "@material-ui/core";
+import Image from "next/image";
+import logo from "../../public/assets/images/1.png";
 
-  return (
-    <nav className="navbar">
-      <div className="nav-logo"><Image height="50" width="50" src={logo}/></div>
-      {isMobile ? (
-        <div></div>
-      ) : (
-        <div className="nav-menu">
-          <span>Services</span>
-          <span>Portfolio</span>
-          <span>Contact</span>
-        </div>
-      )}
-    </nav>
-  );
+const useStyles = makeStyles((theme) => ({
+	navlinks: {
+		marginLeft: theme.spacing(10),
+		display: "flex",
+	},
+	logo: {
+		flexGrow: "1",
+		cursor: "pointer",
+	},
+	link: {
+		textDecoration: "none",
+		color: "white",
+		fontSize: "20px",
+		marginLeft: theme.spacing(5),
+		"&:hover": {
+			color: "white",
+			borderBottom: "1px solid blue",
+		},
+	},
+}));
+
+function Navbar() {
+	const classes = useStyles();
+
+	return (
+		<AppBar position="static">
+			<CssBaseline />
+			<Toolbar>
+				<Typography variant="h4" className={classes.logo}>
+					<Image height="50" width="50" src={logo} />
+				</Typography>
+				<div className={classes.navlinks}>
+					<a className={classes.link} href="">
+						Services
+					</a>
+
+					<a className={classes.link} href="">
+						Portfolio
+					</a>
+					<a className={classes.link} href="">
+						Contact
+					</a>
+				</div>
+			</Toolbar>
+		</AppBar>
+	);
 }
+export default Navbar;

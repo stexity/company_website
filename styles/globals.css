@@ -45,6 +45,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-image: url(/public/assets/images/Wave.svg) center;
   height: calc(100vh - 100px);
 }
 .banner-title {

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from 'next/image'
-import bannerSvg from '../../public/assets/Wave.svg'
+// import bannerSvg from '../../public/assets/Wave.svg'
 const Banner = () => {
   return (
     <div className="banner">
