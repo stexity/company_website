@@ -34,16 +34,9 @@ const styles = (muiBaseTheme) => ({
 	subheading: {
 		lineHeight: 1.8,
 	},
-	avatar: {
-		display: "inline-block",
-		border: "2px solid white",
-		"&:not(:first-of-type)": {
-			marginLeft: -muiBaseTheme.spacing.unit,
-		},
-	},
 });
 
-function App({ classes , para, title }) {
+function App({ classes, para, title }) {
 	return (
 		<div className="App">
 			<Card className={classes.card}>
