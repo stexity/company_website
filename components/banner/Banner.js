@@ -6,9 +6,14 @@ const Banner = () => {
   
   return (
     <div className="banner">
-      {/* <Image src={bannerSvg}/> */}
       <div className="banner-title">Stexity</div>
       <div className="banner-tagline">Innovation Meets Efficiancy</div>
+      <div className="banner-image">
+      <Image  alt="Wave"
+        layout="responsive"
+        objectFit="fill" 
+        quality={100} src={bannerSvg}/>
+      </div>
     </div>
   );
 };

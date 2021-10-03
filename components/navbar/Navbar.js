@@ -34,7 +34,7 @@ function Navbar() {
 	const classes = useStyles();
 
 	return (
-		<AppBar position="static">
+		<AppBar  position="static">
 			<CssBaseline />
 			<Toolbar>
 				<Typography variant="h4" className={classes.logo}>
