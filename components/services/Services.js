@@ -35,7 +35,6 @@ const Services = () => {
           showDots={false}
           arrows={false}
           containerClass="dot-container"
-          dotListClass="custom-dot-list"
         >
           <ServicesCardComponent title="Application Development" para="Velit nostrud fugiat mollit velit adipisicing et. Excepteur quis
               enim ad in aliquip sunt. Mollit ea nisi enim labore aute pariatur
