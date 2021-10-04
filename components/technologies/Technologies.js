@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import { SMALL_SCREEN } from "../../utils/constants/variables";
 import { useMediaQuery } from "../../utils/hooks/useMediaQuery";
+import Particle from "react-particles-js";
+import particlesConfig from "../../public/assets/particlesConfig.json";
 
 const Technologies = () => {
   const canvasRef = useRef();
@@ -179,6 +181,30 @@ const Technologies = () => {
     <div className="technologies-section">
       <div className="section-header">Technolgies</div>
       <div className="technolgies-list">
+      {/* <Particle
+				params={
+					(particlesConfig,
+					{
+						particles: {
+							color: {
+								value: "#000000",
+							},
+							line_linked: {
+								color: {
+									value: "#000000",
+								},
+							},
+							number: {
+								value: 50,
+							},
+							size: {
+								value: 3,
+							},
+						},
+					})
+				}
+				className="App-particles__container"
+			/> */}
         <canvas id="canvas" ref={canvasRef}></canvas>
       </div>
     </div>

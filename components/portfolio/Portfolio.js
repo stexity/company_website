@@ -75,6 +75,7 @@ const Portfolio = () => {
       <div className="portfolio-projects">
         {projectsList.map((project) => {
           return (
+            // eslint-disable-next-line react/jsx-key
             <div className="project-image-container">
               <Image
                 src={project.image}

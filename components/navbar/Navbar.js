@@ -8,6 +8,7 @@ import {
 } from "@material-ui/core";
 import Image from "next/image";
 import logo from "../../public/assets/images/1.png";
+import Slide from "react-reveal/Slide";
 
 const useStyles = makeStyles((theme) => ({
 	navlinks: {
@@ -34,23 +35,31 @@ function Navbar() {
 	const classes = useStyles();
 
 	return (
-		<AppBar  position="static">
+		<AppBar position="static">
 			<CssBaseline />
 			<Toolbar>
 				<Typography variant="h4" className={classes.logo}>
-					<Image height="50" width="50" src={logo} />
+					<Slide left>
+						<Image height="50" width="50" src={logo} />
+					</Slide>
 				</Typography>
 				<div className={classes.navlinks}>
-					<a className={classes.link} href="">
-						Services
-					</a>
+					<Slide right>
+						<a className={classes.link} href="">
+							Services
+						</a>
+					</Slide>
 
-					<a className={classes.link} href="">
-						Portfolio
-					</a>
-					<a className={classes.link} href="">
-						Contact
-					</a>
+					<Slide right>
+						<a className={classes.link} href="">
+							Portfolio
+						</a>
+					</Slide>
+					<Slide right>
+						<a className={classes.link} href="">
+							Contact
+						</a>
+					</Slide>
 				</div>
 			</Toolbar>
 		</AppBar>

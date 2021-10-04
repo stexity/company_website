@@ -21,6 +21,7 @@
 
 html,
 body {
+  background-color: var(--primary-blue-light) !important;
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -47,15 +48,18 @@ a {
   flex-direction: column;
   /* align-items: center; */
   justify-content: center;
+
 }
 .banner-title {
   margin-left: 20vw;
   font-size: 90px;
   font-weight: var(--font-weight-header);
+  z-index: 1;
 }
 .banner-tagline {
   margin-left: 20vw;
   font-size: 35px;
+  z-index: 1;
 }
 .banner-image{
   width: 100%;
@@ -160,7 +164,20 @@ a {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  background-color: var(--primary);
 }
+
+.App-particles__container {
+  overflow: hidden;
+  position: absolute;
+  top: 65px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  height: 95vh;
+  /* z-index: -1; */
+}
+
 @media (max-width: 480px) {
   .container {
     width: 88%;
