@@ -88,7 +88,7 @@ const Portfolio = () => {
   const handleClose = () => setOpen(false);
 
 	return (
-		<div className="portfolio-section">
+		<div id="Portfolio" className="portfolio-section">
 			<Slide right>
 				<div className="section-header">Portfolio</div>
 			</Slide>

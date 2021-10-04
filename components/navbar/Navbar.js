@@ -12,20 +12,22 @@ import Slide from "react-reveal/Slide";
 
 const useStyles = makeStyles((theme) => ({
 	navlinks: {
-		marginLeft: '20px',
 		display: "flex",
+		marginLeft: "20px",
 	},
 	logo: {
 		flexGrow: "1",
 		cursor: "pointer",
+		alignSelf: "flex-start",
+		justifySelf: "flex-start",
 	},
 	link: {
-		justifySelf: 'flex-end',
-		alignSelf: 'flex-end',
+		justifySelf: "flex-end",
+		alignSelf: "flex-end",
 		textDecoration: "none",
 		color: "white",
 		fontSize: "20px",
-		marginLeft: '20px',
+		marginLeft: "20px",
 		"&:hover": {
 			color: "white",
 			// borderBottom: "1px solid blue",
@@ -47,18 +49,23 @@ function Navbar() {
 				</Typography>
 				<div className={classes.navlinks}>
 					<Slide right>
-						<a className={classes.link} href="">
+						<a className={classes.link} href="#Home">
+							Home
+						</a>
+					</Slide>
+					<Slide right>
+						<a className={classes.link} href="#Services">
 							Services
 						</a>
 					</Slide>
 
 					<Slide right>
-						<a className={classes.link} href="">
+						<a className={classes.link} href="#Portfolio">
 							Portfolio
 						</a>
 					</Slide>
 					<Slide right>
-						<a className={classes.link} href="">
+						<a className={classes.link} href="Contact">
 							Contact
 						</a>
 					</Slide>

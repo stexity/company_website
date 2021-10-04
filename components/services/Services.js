@@ -26,7 +26,7 @@ const Services = () => {
   };
 
   return (
-    <div className="services-section">
+    <div id="Services" className="services-section">
       <Jump>
 
       <div className="section-header">Services we offer </div>
