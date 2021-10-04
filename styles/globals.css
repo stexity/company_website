@@ -74,7 +74,7 @@ a {
   margin-bottom: 0px !important;
 }
 
-.navbar {
+/* .navbar {
   padding-left: 30px;
   display: flex;
   height: 100px;
@@ -94,7 +94,7 @@ a {
   flex: 1;
   display: flex;
   justify-content: space-evenly;
-}
+} */
 
 .portfolio-card {
   border-radius: 15px;

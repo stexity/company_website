@@ -12,7 +12,7 @@ import Slide from "react-reveal/Slide";
 
 const useStyles = makeStyles((theme) => ({
 	navlinks: {
-		marginLeft: theme.spacing(10),
+		marginLeft: '20px',
 		display: "flex",
 	},
 	logo: {
@@ -20,13 +20,15 @@ const useStyles = makeStyles((theme) => ({
 		cursor: "pointer",
 	},
 	link: {
+		justifySelf: 'flex-end',
+		alignSelf: 'flex-end',
 		textDecoration: "none",
 		color: "white",
 		fontSize: "20px",
-		marginLeft: theme.spacing(5),
+		marginLeft: '20px',
 		"&:hover": {
 			color: "white",
-			borderBottom: "1px solid blue",
+			// borderBottom: "1px solid blue",
 		},
 	},
 }));
@@ -35,7 +37,7 @@ function Navbar() {
 	const classes = useStyles();
 
 	return (
-		<AppBar position="static">
+		<AppBar position="sticky">
 			<CssBaseline />
 			<Toolbar>
 				<Typography variant="h4" className={classes.logo}>

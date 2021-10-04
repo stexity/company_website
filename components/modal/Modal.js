@@ -1,66 +1,53 @@
-import React, { useEffect, useRef, useState } from "react";
-import ReactDOM from "react-dom";
+import * as React from 'react';
+import Backdrop from '@mui/material/Backdrop';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import Fade from '@mui/material/Fade';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
-function Modal({ show, onClose, children, title }) {
-  const [isBrowser, setIsBrowser] = useState(false);
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
-  useEffect(() => {
-    setIsBrowser(true);
-  }, []);
+export default function TransitionsModal({title,content}) {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
-  const handleCloseClick = (e) => {
-    e.preventDefault();
-    onClose();
-  };
-
-  const modalContent = show ? (
-    <div
-      style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "rgba(0, 0, 0, 0.5)",
-      }}
-    >
-      <div
-        style={{
-          background: "white",
-          width: "500px",
-          height: "600px",
-          borderRadius: "15px",
-          padding: "15px",
+  return (
+    <div>
+      <Button onClick={handleOpen}>Open modal</Button>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "flex-end",
-            fontSize: "25px",
-          }}
-        >
-          <a href="#" onClick={handleCloseClick}>
-            x
-          </a>
-        </div>
-        {title && <h1 style={{ color: "#FFF" }}>{title}</h1>}
-        <p>{children}</p>
-      </div>
+        <Fade in={open}>
+          <Box sx={style}>
+            <Typography id="transition-modal-title" variant="h6" component="h2">
+              {title}
+            </Typography>
+            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
+              {content}
+            </Typography>
+          </Box>
+        </Fade>
+      </Modal>
     </div>
-  ) : null;
-
-  if (isBrowser) {
-    return ReactDOM.createPortal(
-      modalContent,
-      document.getElementById("modal-root")
-    );
-  } else {
-    return null;
-  }
+  );
 }
-
-export default Modal;

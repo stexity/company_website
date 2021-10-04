@@ -1,7 +1,23 @@
 import { useState } from "react";
 import Image from "next/image";
-import Modal from "../modal/Modal";
-import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
+import Backdrop from '@mui/material/Backdrop';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import Fade from '@mui/material/Fade';
+import Typography from '@mui/material/Typography';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
 const Portfolio = () => {
 	const responsive = {
@@ -67,29 +83,58 @@ const Portfolio = () => {
 		},
 	];
 
-	const [showModal, setShowModal] = useState(false);
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
 	return (
 		<div className="portfolio-section">
-			<Fade right>
+			<Slide right>
 				<div className="section-header">Portfolio</div>
-			</Fade>
+			</Slide>
+      <Slide bottom>
+
 			<div className="portfolio-projects">
+
 				{projectsList.map((project) => {
-					return (
+          return (
 						// eslint-disable-next-line react/jsx-key
 						<div className="project-image-container">
+               <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+          <Box sx={style}>
+            <Typography id="transition-modal-title" variant="h6" component="h2">
+              {project.name}
+            </Typography>
+            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
+              {project.description}
+            </Typography>
+          </Box>
+        </Fade>
+      </Modal>
 							<Image
 								src={project.image}
 								alt={project.alt}
 								width={600}
 								height={500}
 								className="portfolio-card"
-							/>
+                onClick={handleOpen}
+                />
 						</div>
 					);
 				})}
 			</div>
+        </Slide>
 		</div>
 	);
 };
