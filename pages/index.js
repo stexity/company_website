@@ -27,7 +27,7 @@ export default function Home() {
         <Technologies />
         <Portfolio/>
 
-        <div style={{ height: "100vh" }}></div>
+        {/* <div style={{ height: "100vh" }}></div> */}
       </main>
     </div>
   );
