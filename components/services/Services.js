@@ -1,7 +1,9 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
+import {ServicesCardComponent} from './ServicesCard'
+import Jump from 'react-reveal/Jump';
+import Slide from 'react-reveal/Slide';
 const Services = () => {
   const responsive = {
     superLargeDesktop: {
@@ -25,79 +27,44 @@ const Services = () => {
 
   return (
     <div className="services-section">
-      <div className="section-header">Services we offer: </div>
+      <Jump>
+
+      <div className="section-header">Services we offer </div>
+      </Jump>
       <div className="service-list">
+        <Slide bottom>
+
         <Carousel
           responsive={responsive}
           autoPlay
           infinite
-          autoPlaySpeed={3000}
-          showDots={true}
+          autoPlaySpeed={2000}
+          showDots={false}
           arrows={false}
           containerClass="dot-container"
-          dotListClass="custom-dot-list"
-        >
-          <div className="service-card">
-            <div className="service-card-title">Application Development</div>
-            <p className="service-card-para">
-              Velit nostrud fugiat mollit velit adipisicing et. Excepteur quis
+          >
+          <ServicesCardComponent title="Application Development" para="Velit nostrud fugiat mollit velit adipisicing et. Excepteur quis
               enim ad in aliquip sunt. Mollit ea nisi enim labore aute pariatur
               adipisicing et aliqua enim sunt ad dolore aliqua. In veniam
               excepteur elit laborum ipsum nulla sunt. Lorem exercitation
-              deserunt sint amet consectetur.
-            </p>
-          </div>
-          <div className="service-card">
-            <div className="service-card-title">Cloud Computing</div>
-            <p className="service-card-para">
-              Velit nostrud fugiat mollit velit adipisicing et. Excepteur quis
+              deserunt sint amet consectetur."/>
+          <ServicesCardComponent title="Cloud Computing" para="Velit nostrud fugiat mollit velit adipisicing et. Excepteur quis
               enim ad in aliquip sunt. Mollit ea nisi enim labore aute pariatur
               adipisicing et aliqua enim sunt ad dolore aliqua. In veniam
               excepteur elit laborum ipsum nulla sunt. Lorem exercitation
-              deserunt sint amet consectetur.
-            </p>
-          </div>
-          <div className="service-card">
-            <div className="service-card-title">UI / UX</div>
-            <p className="service-card-para">
-              Velit nostrud fugiat mollit velit adipisicing et. Excepteur quis
+              deserunt sint amet consectetur."/>
+          <ServicesCardComponent title="UI / UX" para="Velit nostrud fugiat mollit velit adipisicing et. Excepteur quis
               enim ad in aliquip sunt. Mollit ea nisi enim labore aute pariatur
               adipisicing et aliqua enim sunt ad dolore aliqua. In veniam
               excepteur elit laborum ipsum nulla sunt. Lorem exercitation
-              deserunt sint amet consectetur.
-            </p>
-          </div>
-          <div className="service-card">
-            <div className="service-card-title">SEO</div>
-            <p className="service-card-para">
-              Velit nostrud fugiat mollit velit adipisicing et. Excepteur quis
+              deserunt sint amet consectetur."/>
+          <ServicesCardComponent title="SEO" para="Velit nostrud fugiat mollit velit adipisicing et. Excepteur quis
               enim ad in aliquip sunt. Mollit ea nisi enim labore aute pariatur
               adipisicing et aliqua enim sunt ad dolore aliqua. In veniam
               excepteur elit laborum ipsum nulla sunt. Lorem exercitation
-              deserunt sint amet consectetur.
-            </p>
-          </div>
-          <div className="service-card">
-            <div className="service-card-title">SEO</div>
-            <p className="service-card-para">
-              Velit nostrud fugiat mollit velit adipisicing et. Excepteur quis
-              enim ad in aliquip sunt. Mollit ea nisi enim labore aute pariatur
-              adipisicing et aliqua enim sunt ad dolore aliqua. In veniam
-              excepteur elit laborum ipsum nulla sunt. Lorem exercitation
-              deserunt sint amet consectetur.
-            </p>
-          </div>
-          <div className="service-card">
-            <div className="service-card-title">SEO</div>
-            <p className="service-card-para">
-              Velit nostrud fugiat mollit velit adipisicing et. Excepteur quis
-              enim ad in aliquip sunt. Mollit ea nisi enim labore aute pariatur
-              adipisicing et aliqua enim sunt ad dolore aliqua. In veniam
-              excepteur elit laborum ipsum nulla sunt. Lorem exercitation
-              deserunt sint amet consectetur.
-            </p>
-          </div>
+              deserunt sint amet consectetur."/>
         </Carousel>
+              </Slide>
       </div>
     </div>
   );

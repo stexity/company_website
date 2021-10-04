@@ -21,6 +21,7 @@
 
 html,
 body {
+  background-color: rgba(248, 245, 245, 0.377) !important;
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -42,22 +43,27 @@ a {
 
 /* CLASS STYLES */
 .banner {
+  margin-top: 25vh;
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
   justify-content: center;
-  height: calc(100vh - 100px);
+
 }
 .banner-title {
-  font-size: 60px;
+  margin-left: 20vw;
+  font-size: 90px;
   font-weight: var(--font-weight-header);
+  z-index: 1;
 }
 .banner-tagline {
-  font-size: 25px;
+  margin-left: 20vw;
+  font-size: 35px;
+  z-index: 1;
 }
-
-.container {
-  width: 80%;
-  margin: auto;
+.banner-image{
+  width: 100%;
+  margin-top: -30vh;
 }
 
 .dot-container {
@@ -68,7 +74,7 @@ a {
   margin-bottom: 0px !important;
 }
 
-.navbar {
+/* .navbar {
   padding-left: 30px;
   display: flex;
   height: 100px;
@@ -88,7 +94,7 @@ a {
   flex: 1;
   display: flex;
   justify-content: space-evenly;
-}
+} */
 
 .portfolio-card {
   border-radius: 15px;
@@ -104,11 +110,12 @@ a {
   position: relative;
 }
 .portfolio-projects {
-  margin-top: 48px;
+  margin-top: 55px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 20px;
-  row-gap: 30px;
+  align-self: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 150px;
+  row-gap: 50px;
 }
 
 .project-image-container:hover .portfolio-card {
@@ -134,40 +141,19 @@ a {
   width: 60%;
 }
 
-.service-card {
-  padding: 12px;
-  margin: 16px;
-  /*Using a small margin here since otherwise the left broder of the next card was visible */
-  /* margin-left: 1px;  */
-  flex-wrap: wrap;
-  font-size: var(--font-size-small);
-  text-align: center;
-  border: 1px solid var(--primary-light);
-  border-radius: var(--border-radius-primary);
-}
-.service-card-para {
-  font-size: var(--font-size-small);
-  line-height: 2.5;
-}
-.service-card-title {
-  min-height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--font-size-subheader);
-}
-
 .technologies-section,
 .services-section,
 .portfolio-section {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 100px);
-  padding-top: 1.5rem;
+  /* height: calc(100vh - 100px); */
+  padding-top: 5rem;
 }
 
 .section-header {
   font-size: var(--font-size-header);
+  font-size: 40px;
+  align-self: center;
   font-weight: var(--font-weight-header);
 }
 .service-list {
@@ -176,9 +162,23 @@ a {
 
 .technolgies-list {
   display: flex;
+  margin-top: 5rem;
   justify-content: center;
   align-items: flex-start;
+  /* background-color: var(--primary); */
 }
+
+.App-particles__container {
+  overflow: hidden;
+  position: absolute;
+  top: 65px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  height: 95vh;
+  /* z-index: -1; */
+}
+
 @media (max-width: 480px) {
   .container {
     width: 88%;
