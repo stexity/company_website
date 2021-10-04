@@ -2,6 +2,8 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import {ServicesCardComponent} from './ServicesCard'
+import Jump from 'react-reveal/Jump';
+import Slide from 'react-reveal/Slide';
 const Services = () => {
   const responsive = {
     superLargeDesktop: {
@@ -25,8 +27,13 @@ const Services = () => {
 
   return (
     <div className="services-section">
+      <Jump>
+
       <div className="section-header">Services we offer </div>
+      </Jump>
       <div className="service-list">
+        <Slide bottom>
+
         <Carousel
           responsive={responsive}
           autoPlay
@@ -35,7 +42,7 @@ const Services = () => {
           showDots={false}
           arrows={false}
           containerClass="dot-container"
-        >
+          >
           <ServicesCardComponent title="Application Development" para="Velit nostrud fugiat mollit velit adipisicing et. Excepteur quis
               enim ad in aliquip sunt. Mollit ea nisi enim labore aute pariatur
               adipisicing et aliqua enim sunt ad dolore aliqua. In veniam
@@ -57,6 +64,7 @@ const Services = () => {
               excepteur elit laborum ipsum nulla sunt. Lorem exercitation
               deserunt sint amet consectetur."/>
         </Carousel>
+              </Slide>
       </div>
     </div>
   );

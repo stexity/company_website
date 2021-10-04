@@ -1,8 +1,7 @@
 import { useEffect, useRef } from "react";
 import { SMALL_SCREEN } from "../../utils/constants/variables";
 import { useMediaQuery } from "../../utils/hooks/useMediaQuery";
-import Particle from "react-particles-js";
-import particlesConfig from "../../public/assets/particlesConfig.json";
+import Fade from 'react-reveal/Fade';
 
 const Technologies = () => {
   const canvasRef = useRef();
@@ -130,7 +129,7 @@ const Technologies = () => {
         // convert to cartesian and then draw.
         const alpha = 0.6 + 0.4 * (x / radius);
         const size = fontSize + 2 + 5 * (x / radius);
-        ctx.fillStyle = `rgba(255,250,250,${alpha})`;
+        ctx.fillStyle = `#000000`;
         ctx.font = `${size}px "Helvetica Neue", sans-serif`;
         ctx.fillText(text, y + width / 2, -z + height / 2);
 
@@ -179,33 +178,17 @@ const Technologies = () => {
 
   return (
     <div className="technologies-section">
+      <Fade left>
       <div className="section-header">Technolgies</div>
+      </Fade>
       <div className="technolgies-list">
-      {/* <Particle
-				params={
-					(particlesConfig,
-					{
-						particles: {
-							color: {
-								value: "#000000",
-							},
-							line_linked: {
-								color: {
-									value: "#000000",
-								},
-							},
-							number: {
-								value: 50,
-							},
-							size: {
-								value: 3,
-							},
-						},
-					})
-				}
-				className="App-particles__container"
-			/> */}
-        <canvas id="canvas" ref={canvasRef}></canvas>
+      <div >Lorem Ipsum Dolor Sit Amet </div><div>Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet</div>
+      <div >Lorem Ipsum Dolor Sit Amet </div><div>Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet</div>
+      <div >Lorem Ipsum Dolor Sit Amet </div><div>Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet</div>
+        <canvas  id="canvas" ref={canvasRef}></canvas>
+      <div >Lorem Ipsum Dolor Sit Amet </div><div>Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet</div>
+      <div >Lorem Ipsum Dolor Sit Amet </div><div>Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet</div>
+      <div >Lorem Ipsum Dolor Sit Amet </div><div>Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet</div>
       </div>
     </div>
   );

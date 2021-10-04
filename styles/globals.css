@@ -21,7 +21,7 @@
 
 html,
 body {
-  background-color: var(--primary-blue-light) !important;
+  background-color: rgba(248, 245, 245, 0.377) !important;
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -162,9 +162,10 @@ a {
 
 .technolgies-list {
   display: flex;
+  margin-top: 5rem;
   justify-content: center;
   align-items: flex-start;
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
 }
 
 .App-particles__container {
