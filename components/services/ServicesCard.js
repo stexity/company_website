@@ -9,7 +9,7 @@ import Typography from "@material-ui/core/Typography";
 
 const styles = (muiBaseTheme) => ({
 	card: {
-		transform: 'rotate(5deg)',
+		transform: 'rotate(2deg)',
 		maxWidth: 400,
 		margin: "auto",
 		transition: "0.3s",
