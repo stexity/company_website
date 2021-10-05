@@ -6,6 +6,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
+import { useMediaQuery } from "../../utils/hooks/useMediaQuery";
 
 const styles = (muiBaseTheme) => ({
 	card: {

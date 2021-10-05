@@ -21,6 +21,8 @@
 
 html,
 body {
+  height: 100vh;
+  width: 100vw;
   background-color: rgba(248, 245, 245, 0.377) !important;
   padding: 0;
   margin: 0;
@@ -122,6 +124,8 @@ a {
 }
 .portfolio-projects {
   margin-top: 55px;
+  margin-left: 10px;
+  margin-right: 10px;
   display: grid;
   align-self: center;
   grid-template-columns: 1fr 1fr;
@@ -176,25 +180,60 @@ a {
   margin-top: 5rem;
   justify-content: center;
   align-items: flex-start;
+  width: 90vw;
   /* background-color: var(--primary); */
 }
 
-@media (max-width: 480px) {
-  .container {
-    width: 88%;
-    margin: 24px;
-  }
-  .technolgies-list {
+@media only screen and (max-width: 769px) {
+  
+
+  .banner {
+    height: 70vh;
+    margin-top: 25vh;
     display: flex;
-    justify-content: flex-start;
-    margin-left: -45px;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
   }
 
+  .banner-title {
+    margin-top: -20vh;
+    margin-left: 10vw;
+    font-size: 90px;
+    font-weight: var(--font-weight-header);
+    z-index: 1;
+  }
+  .banner-tagline {
+    margin-left: 20vw;
+    font-size: 35px;
+    z-index: 1;
+  }
+  .banner-image {
+    width: 100%;
+    margin-top: -5vh;
+  }
+  .App-particles__container {
+    overflow: hidden;
+    position: absolute;
+    top: 65px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    height: 70vh;
+    /* z-index: -1; */
+  }
   .portfolio-projects {
-    grid-template-columns: 1fr;
-  }
 
-  .services-section {
-    margin-bottom: 90px;
+    grid-template-columns: 1fr;
+
   }
+}
+
+@media only screen and (max-width: 430) {
+.nav-logo {
+  /* flex-grow: 1; */
+  cursor: pointer;
+  margin: auto !important; 
+  display: flex !important;
+}
 }

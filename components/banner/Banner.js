@@ -4,6 +4,7 @@ import bannerSvg from "../../public/assets/images/Wave.svg";
 import Particle from "react-particles-js";
 import particlesConfig from "../../public/assets/particlesConfig.json";
 import Flash from "react-reveal/Flash";
+import { useMediaQuery } from "../../utils/hooks/useMediaQuery";
 
 const Banner = () => {
 	return (
@@ -22,7 +23,7 @@ const Banner = () => {
 								},
 							},
 							number: {
-								value: 180,
+								value: useMediaQuery('(max-width: 780px)')?60:180,
 							},
 							size: {
 								value: 2,
