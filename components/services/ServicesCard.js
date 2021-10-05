@@ -6,12 +6,13 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
-import { useMediaQuery } from "../../utils/hooks/useMediaQuery";
+
+
 
 const styles = (muiBaseTheme) => ({
 	card: {
 		transform: 'rotate(2deg)',
-		maxWidth: 400,
+		maxWidth: 360,
 		margin: "auto",
 		transition: "0.3s",
 		borderRadius: '100px 5px 100px 5px',

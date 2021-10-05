@@ -23,7 +23,7 @@ const Banner = () => {
 								},
 							},
 							number: {
-								value: useMediaQuery('(max-width: 780px)')?60:180,
+								value: useMediaQuery('(max-width: 780px)')?60:160,
 							},
 							size: {
 								value: 2,

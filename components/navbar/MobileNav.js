@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -64,7 +65,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-end',
 }));
 
-export default function PersistentDrawerLeft() {
+export default function MobileNav() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -79,7 +80,7 @@ export default function PersistentDrawerLeft() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      <AppBar style={{padding:'10px 0px 10px 0px',boxShadow: 'none',backgroundColor:'rgba(248, 245, 245, 0.5)'}} position="fixed" open={open}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -90,25 +91,27 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            
+          <Typography style={{alignItems: 'center',justifyContent: 'center', display:'flex',flexGrow: '1.5',marginLeft:'-15vw'}} variant="h6" noWrap component="div">
+            <Image src={logo} width={50} height={50}/>
           </Typography>
         </Toolbar>
       </AppBar>
-      <Drawer
+      <Drawer 
         sx={{
           width: drawerWidth,
           flexShrink: 0,
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
+            padding:'10px 0px 10px 0px',boxShadow: 'none',backgroundColor:'rgba(248, 245, 245, 0.377)'
           },
         }}
+        style={{padding:'10px 0px 10px 0px',boxShadow: 'none',backgroundColor:'rgba(248, 245, 245, 0.377)'}}
         variant="persistent"
         anchor="left"
         open={open}
       >
-        <DrawerHeader>
+        <DrawerHeader >
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
@@ -117,7 +120,7 @@ export default function PersistentDrawerLeft() {
         <List>
           {['Home', 'Services', 'Portfolio', 'Contact'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemText primary={text} />
+              <a href={'#'.concat(text)} className="mobile-link" primary={text} >{text}</a>
             </ListItem>
           ))}
         </List>

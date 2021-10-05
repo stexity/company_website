@@ -56,11 +56,11 @@ a {
 .App-particles__container {
   overflow: hidden;
   position: absolute;
-  top: 65px;
+  top: 70px;
   left: 0px;
   bottom: 0px;
   right: 0px;
-  height: 90vh;
+  height: 95vh;
   /* z-index: -1; */
 }
 
@@ -90,13 +90,18 @@ a {
 
 .nav-links {
   display: flex;
-  margin-left: 20px;
+  /* margin-left: 50px !important; */
 }
 .nav-logo {
-  flex-grow: 1;
+  flex-grow: 2;
   cursor: pointer;
   align-self: flex-start;
   justify-self: flex-start;
+}
+.mobile-link{
+  margin: auto;
+  justify-self: center;
+  align-self: center;
 }
 .link {
   justify-self: flex-end;
@@ -179,8 +184,8 @@ a {
   display: flex;
   margin-top: 5rem;
   justify-content: center;
-  align-items: flex-start;
-  width: 90vw;
+  align-items: center;
+  margin-right: 6vh;
   /* background-color: var(--primary); */
 }
 
@@ -229,11 +234,16 @@ a {
   }
 }
 
-@media only screen and (max-width: 430) {
-.nav-logo {
-  /* flex-grow: 1; */
-  cursor: pointer;
-  margin: auto !important; 
-  display: flex !important;
-}
+@media only screen and (max-width: 415px) {
+
+  .App-particles__container {
+    overflow: hidden;
+    position: absolute;
+    top: 65px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    height: 60vh;
+    /* z-index: -1; */
+  }
 }

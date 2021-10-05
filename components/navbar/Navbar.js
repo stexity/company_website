@@ -10,20 +10,12 @@ import logo from "../../public/assets/images/1.png";
 import Slide from "react-reveal/Slide";
 import PersistentDrawerLeft from "./MobileNav";
 import { useMediaQuery } from "../../utils/hooks/useMediaQuery";
+import MobileNav from "./MobileNav";
 
 
 function Navbar() {
 	return (
-		useMediaQuery('(max-width: 430px)')?<AppBar style={{padding:'10px 0px 10px 0px',boxShadow: 'none',backgroundColor:'rgba(248, 245, 245, 0.377)'}} position="sticky">
-		<CssBaseline />
-		<Toolbar>
-			<Typography variant="h4" className="nav-logo">
-				<Slide left>
-					<Image height="50" width="50" src={logo} />
-				</Slide>
-			</Typography>
-		</Toolbar>
-	</AppBar>:
+		useMediaQuery('(max-width: 430px)')?<MobileNav/>:
 		<AppBar style={{padding:'10px 0px 10px 0px',boxShadow: 'none',backgroundColor:'rgba(248, 245, 245, 0.377)'}} position="sticky">
 			<CssBaseline />
 			<Toolbar>
