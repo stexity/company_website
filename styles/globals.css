@@ -247,3 +247,30 @@ a {
     /* z-index: -1; */
   }
 }
+
+@media only screen and (max-width: 320px) {
+
+  .App-particles__container {
+    overflow: hidden;
+    position: absolute;
+    top: 65px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    height: 60vh;
+    /* z-index: -1; */
+  }
+
+  .banner-title {
+    margin-left: 20vw;
+    font-size: 60px;
+    font-weight: var(--font-weight-header);
+    z-index: 1;
+  }
+  .banner-tagline {
+    margin-left: 20vw;
+    font-size: 25px;
+    z-index: 1;
+  }
+
+}
