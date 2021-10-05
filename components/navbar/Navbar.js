@@ -4,68 +4,43 @@ import {
 	Toolbar,
 	CssBaseline,
 	Typography,
-	makeStyles,
 } from "@material-ui/core";
 import Image from "next/image";
 import logo from "../../public/assets/images/1.png";
 import Slide from "react-reveal/Slide";
+import PersistentDrawerLeft from "./MobileNav";
 
-const useStyles = makeStyles((theme) => ({
-	navlinks: {
-		display: "flex",
-		marginLeft: "20px",
-	},
-	logo: {
-		flexGrow: "1",
-		cursor: "pointer",
-		alignSelf: "flex-start",
-		justifySelf: "flex-start",
-	},
-	link: {
-		justifySelf: "flex-end",
-		alignSelf: "flex-end",
-		textDecoration: "none",
-		color: "white",
-		fontSize: "20px",
-		marginLeft: "20px",
-		"&:hover": {
-			color: "white",
-			// borderBottom: "1px solid blue",
-		},
-	},
-}));
 
 function Navbar() {
-	const classes = useStyles();
-
 	return (
-		<AppBar position="sticky">
+		false ? <PersistentDrawerLeft/> :
+		<AppBar style={{padding:'10px 0px 10px 0px',boxShadow: 'none',backgroundColor:'rgba(248, 245, 245, 0.377)'}} position="sticky">
 			<CssBaseline />
 			<Toolbar>
-				<Typography variant="h4" className={classes.logo}>
+				<Typography variant="h4" className="nav-logo">
 					<Slide left>
 						<Image height="50" width="50" src={logo} />
 					</Slide>
 				</Typography>
-				<div className={classes.navlinks}>
+				<div className="nav-links">
 					<Slide right>
-						<a className={classes.link} href="#Home">
+						<a className="link" href="#Home">
 							Home
 						</a>
 					</Slide>
 					<Slide right>
-						<a className={classes.link} href="#Services">
+						<a className="link" href="#Services">
 							Services
 						</a>
 					</Slide>
 
 					<Slide right>
-						<a className={classes.link} href="#Portfolio">
+						<a className="link" href="#Portfolio">
 							Portfolio
 						</a>
 					</Slide>
 					<Slide right>
-						<a className={classes.link} href="Contact">
+						<a className="link" href="Contact">
 							Contact
 						</a>
 					</Slide>
