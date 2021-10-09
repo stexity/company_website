@@ -8,7 +8,6 @@ import {
 import Image from "next/image";
 import logo from "../../public/assets/images/1.png";
 import Slide from "react-reveal/Slide";
-import PersistentDrawerLeft from "./MobileNav";
 import { useMediaQuery } from "../../utils/hooks/useMediaQuery";
 import MobileNav from "./MobileNav";
 
@@ -21,7 +20,7 @@ function Navbar() {
 			<Toolbar>
 				<Typography variant="h4" className="nav-logo">
 					<Slide left>
-						<Image height="50" width="50" src={logo} />
+						<Image alt="logo" height="50" width="50" src={logo} />
 					</Slide>
 				</Typography>
 				<div className="nav-links">
