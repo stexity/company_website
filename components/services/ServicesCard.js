@@ -6,13 +6,14 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
-
+import Image from 'next/image'
 
 
 const styles = (muiBaseTheme) => ({
 	card: {
 		transform: 'rotate(2deg)',
 		maxWidth: 360,
+		minHeight: 540,
 		margin: "auto",
 		transition: "0.3s",
 		borderRadius: '100px 5px 100px 5px',
@@ -40,16 +41,11 @@ const styles = (muiBaseTheme) => ({
 	},
 });
 
-function App({ classes, para, title }) {
+function App({ classes, para, title, image }) {
 	return (
 		<div className="App">
 			<Card className={classes.card}>
-				<CardMedia
-					className={classes.media}
-					image={
-						"https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg"
-					}
-				/>
+				<Image width={400} height={300} className={classes.media} alt="Services-Image" src={image}/>
 				<CardContent className={classes.content}>
 					<Typography
 						className={"MuiTypography--heading"}
@@ -61,7 +57,7 @@ function App({ classes, para, title }) {
 					<Divider className={classes.divider} light />
 					<Typography
 						className={"MuiTypography--subheading"}
-						variant={"caption"}
+						
 					>
 						{para}
 					</Typography>
